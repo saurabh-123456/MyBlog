@@ -1,0 +1,24 @@
+<%-include("header")-%>
+    <div class="container">
+        <h1>Home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati perspiciatis, quaerat, vitae accusantium, voluptatibus sunt sit maxime deleniti reprehenderit earum rem aliquid itaque animi inventore dicta! Necessitatibus recusandae sapiente inventore? Nemo delectus asperiores et similique sed corporis velit natus, a architecto eligendi odio harum deserunt necessitatibus quod iure tempora amet impedit officia nisi ipsum dolor! At voluptatum dolores, consequuntur dignissimos ut quaerat corporis incidunt nobis repudiandae, hic commodi magnam odit numquam impedit quia cum ipsum perferendis mollitia iusto non. Exercitationem laborum quidem nisi at. Odio rerum dolorum impedit laboriosam sit, eos quis, neque sed similique dolorem ex aut asperiores enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur enim alias vel, consequatur corporis veritatis perspiciatis asperiores officia necessitatibus quis! Adipisci consequuntur ullam repellat similique voluptatem? Fugiat quis deleniti dolor.</p>
+        <%posts.forEach(function(post){%>
+            <div class="post">
+                <div class="heading">
+                    <h1><%=post.name%></h1>
+                    <h3><span>#</span><%=post.time%></h3>
+                </div>
+                <%if(post.item.length>500){%>
+                    <p><%=post.item.substring(1,500)+" ..."%><a href="/posts/<%=post.name%>">Read More</a></p>
+                <%}else{%>
+                <p><%=post.item%></p>
+                <%}%>
+            </div>
+            
+        <%})%>
+    </div>
+    <div class="compose">
+        <a href="/compose" id="compose">Compose Your Content</a>
+    </div>
+<%-include("footer")-%>
+    

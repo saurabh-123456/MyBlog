@@ -1,0 +1,11 @@
+<%-include("header")-%>
+    <div class="container  container1">
+        <form action="/compose" method="post" class="message">
+            <h3>Enter Your Name:</h3>
+            <input type="text" name="yourName" id="name" placeholder="Enter Your full Name">
+            <h3>Type Your News Below:</h3>
+            <textarea name="item" id="news" cols="50" rows="10" placeholder="Enter a relevant content......"></textarea>
+            <button type="submit" name="myNews" >Add News</button>
+        </form>
+    </div>
+<%-include("footer")-%>
